@@ -53,11 +53,11 @@
   register: vim_plugin_doc_dir_installed
   changed_when: false
 
-- name: Create/update '{{ vim_plugin_name }}' plugin helptags.
-  command: "vim -c 'helptags . ' -c q"
-  args:
-    chdir: "{{ vim_plugin_doc }}"
-  register: vim_plugin_doc_helptags
-  when:
-    - vim_plugin_doc_dir_installed.stat.exists
-  changed_when: false
+    #- name: Create/update '{{ vim_plugin_name }}' plugin helptags.
+    #  command: "vim -c 'helptags . ' -c q"
+    # args:
+    # chdir: "{{ vim_plugin_doc }}"
+    #  register: vim_plugin_doc_helptags
+    # when:
+    #    - vim_plugin_doc_dir_installed.stat.exists
+    #  changed_when: false
